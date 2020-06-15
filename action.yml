@@ -9,7 +9,7 @@ inputs:
     description: 'tag or commit id of nginx repo - if omitted, the current master will be used'
 runs:
   using: docker
-  image: docker://debian:stetch-slim
-  entrypoint: build.sh
+  image: 'Dockerfile'
+  entrypoint: entrypoint.sh
   args:
     - ${{ inputs.nginx-version }}
