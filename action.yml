@@ -1,0 +1,15 @@
+name: 'nginx module build'
+description: 'bulid nginx modules using a specified nginx version'
+author: 'Johannes Westhuis'
+branding:
+  icon: 'octagon'
+  color: 'green'
+inputs:
+  nginx-version:
+    description: 'tag or commit id of nginx repo - if omitted, the current master will be used'
+runs:
+  using: docker
+  image: docker://debian:stetch-slim
+  entrypoint: build.sh
+  args:
+    - ${{ inputs.nginx-version }}
