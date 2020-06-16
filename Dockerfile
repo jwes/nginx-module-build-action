@@ -5,7 +5,8 @@ COPY entrypoint.sh /entrypoint.sh
 
 RUN apt-get update && apt-get install -y \
 	git \
-	clang 
+	clang \
+	make
 
 ENTRYPOINT ["/entrypoint.sh"]
 

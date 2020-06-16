@@ -15,6 +15,6 @@ if [ -n $REF ]; then
   git checkout $REF
 fi
 
-./auto/configure --with-compat --add-dynamic-module=$CPWD
+./auto/configure --with-compat --without-http_gzip_module --without-http_rewrite_module --add-dynamic-module=$CPWD
 make modules
 
