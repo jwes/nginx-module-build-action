@@ -7,8 +7,11 @@ branding:
 inputs:
   nginx-version:
     description: 'tag or commit id of nginx repo - if omitted, the current master will be used'
+  additional-packages:
+    description: 'packages that need to be installed to compile the module successfully'
 runs:
   using: docker
   image: 'Dockerfile'
   args:
     - ${{ inputs.nginx-version }}
+    - ${{ inputs.additional-packages }}
