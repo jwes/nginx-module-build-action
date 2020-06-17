@@ -7,12 +7,17 @@ This action builds a nginx module using the nginx build process..
 
 a git revision on repository https://github.com/nginx/nginx
 
+### `additional-packages`
+
+package dependencies of the module
+
 ## Outputs
 
 Currently no outputs are defined
 
 ## Example usage
-
+```
 uses: jwes/nginx-module-build-action@master
 with:
   nginx-version: "release-1.18.0"
+```
