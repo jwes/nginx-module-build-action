@@ -6,7 +6,11 @@ COPY entrypoint.sh /entrypoint.sh
 RUN apt-get update && apt-get install -y \
 	git \
 	clang \
-	make
+	make \
+	libpcre3-dev \
+	zlibc \
+	zlib1g \
+	zlib1g-dev
 
 ENTRYPOINT ["/entrypoint.sh"]
 

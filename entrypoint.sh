@@ -21,13 +21,13 @@ if [ -n $REF ]; then
 fi
 
 if [ -n $PGKS ]; then
-  apt install -y $PGKS
+  apt-get install -y $PGKS
   if [ $? -ne 0 ]; then
     exit 1;
   fi
 fi
 
-./auto/configure --with-compat --without-http_gzip_module --without-http_rewrite_module --add-dynamic-module=$CPWD
+./auto/configure --with-compat --add-dynamic-module=$CPWD
 if [ $? -ne 0 ]; then
   exit 1;
 fi
